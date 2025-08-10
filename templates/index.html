@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Marking</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>📋 Attendance Marking</h2>
+        <form method="POST" action="/mark">
+            <label for="student_id">Enter Student ID:</label>
+            <input type="text" id="student_id" name="student_id" required>
+            <button type="submit">Mark Present</button>
+        </form>
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
